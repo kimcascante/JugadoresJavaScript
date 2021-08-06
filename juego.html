@@ -1,0 +1,53 @@
+<canvas
+    id="canva"
+	width="500"
+	height="500"
+	style="border: 1px solid black"
+	>
+
+    <script>
+        //alert('Juego iniciado')
+        var canva = document.getElementById("canva")
+
+        var ctx = canva.getContext('2d');
+
+        ctx.font = "30px Arial";
+        ctx.fillText("Mi primer juego", 10, 30);
+
+        ctx.fillRect(10, 30, 50, 50);
+
+        var x = 40;
+        var spdX = 20;
+
+        var y = 100;
+        var spdY = 20;
+
+        x = x + spdX;
+        y = y + spdY;
+        ctx.fillText("K", x, y);
+
+        function update(){
+            x = x + spdX;
+            y = y + spdY;
+            ctx.fillText("K", x, y);
+        }
+
+        setInterval(update, 1000);
+        
+        //ctx.fillText("J", y, y)
+        //ctx.fillText("J", y + y, 100)
+        //ctx.fillText("J", 100 + x + x, 100)
+        //ctx.fillText("J", y + x + x + x, y)
+
+        //x = x + 50;
+        //ctx.fillText("J", y + x, y)
+
+        //x += 30;
+        //ctx.fillText("J", x, y)
+
+        function saludar() {
+            console.log("Hola")
+        }
+
+    </script>
+</canvas>
